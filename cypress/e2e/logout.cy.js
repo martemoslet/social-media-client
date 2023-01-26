@@ -1,6 +1,6 @@
 describe("Social Media App: Authenticated user", () => {
     beforeEach(() => {
-        cy.visit("https://martemoslet.github.io/social-media-client/");
+        cy.visit("/");
         cy.wait(500)
         cy.clearLocalStorage()
 
