@@ -13,8 +13,8 @@ describe("Social Media App: Authenticated user", () => {
 
     it("user can login", () => {
         cy.get("#loginForm").should("be.visible");
-        cy.get("#loginEmail").should("be.visible").type(`marte.moslet@noroff.no`, {delay: 100});
-        cy.get("#loginPassword").should("exist").type(`passord1{enter}`).should(() => {
+        cy.get("#loginEmail").should("be.visible").type(`test.user.cypress@noroff.no`, {delay: 100});
+        cy.get("#loginPassword").should("exist").type(`cypresstest{enter}`).should(() => {
             expect(localStorage.getItem("token")).to.not.be.null
         });
 
