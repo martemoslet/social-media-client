@@ -26,11 +26,9 @@ describe("Social Media App: Authenticated user", () => {
 
     it("user cannot submit login form with invalid credentials", () => {
         cy.get("#loginForm").should("be.visible");
-        cy.get("#loginEmail").should("be.visible").type(`invalid@email.no`).then(($email) => {
+        cy.get("#loginPassword").should("exist").type(`passord`)
+        cy.get("#loginEmail").should("be.visible").type(`invalid@email.no{enter}`).then(($email) => {
             expect($email[0].validationMessage).to.not.be.empty
-
-        cy.get("#loginPassword").should("exist").type(`passord{enter}`)
-
         });
     })
 })
